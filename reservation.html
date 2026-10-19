@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Table | Recipe Secrets Restaurant</title>
+  <meta
+    name="description"
+    content="Reserve your table at Recipe Secrets Restaurant. Choose your date, time, and party size in just a minute."
+  />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍽️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <a href="index.html" class="logo">Recipe <span>Secrets</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="specials.html">Specials</a></li>
+          <li><a href="reservation.html" aria-current="page">Reservation</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-backdrop"></div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero page-hero">
+      <div class="hero-content">
+        <h1>Book a Table</h1>
+        <p class="tagline">We can't wait to host you. Fill in the details below.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="form-wrapper">
+          <div class="form-success" id="reservation-success" role="status" tabindex="-1">
+            Thank you! Your reservation request has been sent. We'll confirm by email or phone shortly.
+          </div>
+
+          <!--
+            TODO: replace — Formspree setup
+            1. Create a free form at https://formspree.io and copy your unique endpoint.
+            2. Replace YOUR_FORM_ID below with that endpoint, e.g.
+               action="https://formspree.io/f/abcd1234"
+            3. No other changes are needed — js/main.js already submits this form via fetch
+               and shows the success message above once Formspree responds with 200 OK.
+          -->
+          <form id="reservation-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <div class="form-row two-col">
+              <div class="form-field">
+                <label for="res-name">Full Name <span class="required">*</span></label>
+                <input type="text" id="res-name" name="name" autocomplete="name" required />
+                <p class="error-message" id="res-name-error"></p>
+              </div>
+              <div class="form-field">
+                <label for="res-email">Email <span class="required">*</span></label>
+                <input type="email" id="res-email" name="email" autocomplete="email" required />
+                <p class="error-message"></p>
+              </div>
+            </div>
+
+            <div class="form-row two-col">
+              <div class="form-field">
+                <label for="res-phone">Phone <span class="required">*</span></label>
+                <input type="tel" id="res-phone" name="phone" autocomplete="tel" required />
+                <p class="error-message"></p>
+              </div>
+              <div class="form-field">
+                <label for="res-party-size">Party Size (1–12) <span class="required">*</span></label>
+                <input type="number" id="res-party-size" name="party_size" min="1" max="12" required />
+                <p class="error-message"></p>
+              </div>
+            </div>
+
+            <div class="form-row two-col">
+              <div class="form-field">
+                <label for="res-date">Date <span class="required">*</span></label>
+                <input type="date" id="res-date" name="date" required />
+                <p class="error-message"></p>
+              </div>
+              <div class="form-field">
+                <label for="res-time">Time <span class="required">*</span></label>
+                <input type="time" id="res-time" name="time" required />
+                <p class="error-message"></p>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="res-requests">Special Requests</label>
+                <textarea
+                  id="res-requests"
+                  name="special_requests"
+                  placeholder="Allergies, celebrations, seating preferences…"
+                ></textarea>
+                <p class="error-message"></p>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Request Reservation</button>
+            <p class="form-note">
+              Fields marked <span class="required">*</span> are required. We'll confirm availability by email or
+              phone within 24 hours.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Visit Us</h3>
+          <!-- TODO: replace -->
+          <address>
+            123 Culinary Lane<br />
+            Downtown District<br />
+            Springfield, ST 12345
+          </address>
+        </div>
+        <div>
+          <h3>Contact & Hours</h3>
+          <!-- TODO: replace -->
+          <p>Phone: (555) 123-4567</p>
+          <p>Email: hello@recipesecrets.example</p>
+          <p>Mon–Thu 5–10pm · Fri–Sat 5–11pm · Sun 4–9pm</p>
+        </div>
+        <div>
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <!-- TODO: replace with real social links -->
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter / X">X</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="copyright-year">2026</span> Recipe Secrets Restaurant. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
