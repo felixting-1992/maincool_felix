@@ -1,12 +1,12 @@
 /* =========================================================
    Recipe Secrets Restaurant — shared stylesheet
-   Palette: bright light blue, cream, gold accent
+   Palette: deep burgundy, cream, gold accent
    Headings: Playfair Display (serif) | Body: Inter (sans-serif)
    ========================================================= */
 
 :root {
-  --color-blue: #11689c;
-  --color-blue-dark: #073a5c;
+  --color-burgundy: #5c1a2b;
+  --color-burgundy-dark: #3f0f1c;
   --color-cream: #faf3e8;
   --color-cream-dark: #f0e4cf;
   --color-gold: #c9a227;
@@ -61,7 +61,7 @@ h3,
 h4 {
   font-family: var(--font-heading);
   line-height: 1.2;
-  color: var(--color-blue-dark);
+  color: var(--color-burgundy-dark);
 }
 
 .container {
@@ -76,7 +76,7 @@ h4 {
   left: -999px;
   top: 0;
   background: var(--color-gold);
-  color: var(--color-blue-dark);
+  color: var(--color-burgundy-dark);
   padding: 0.5rem 1rem;
   z-index: 1000;
   font-weight: 600;
@@ -107,7 +107,7 @@ h4 {
 
 .btn-primary {
   background-color: var(--color-gold);
-  color: var(--color-blue-dark);
+  color: var(--color-burgundy-dark);
 }
 
 .btn-primary:hover,
@@ -124,12 +124,12 @@ h4 {
 .btn-secondary:hover,
 .btn-secondary:focus-visible {
   background-color: var(--color-cream);
-  color: var(--color-blue-dark);
+  color: var(--color-burgundy-dark);
 }
 
 /* ---------- Header / Nav ---------- */
 .site-header {
-  background-color: var(--color-blue-dark);
+  background-color: var(--color-burgundy);
   position: sticky;
   top: 0;
   z-index: 500;
@@ -223,7 +223,7 @@ h4 {
     right: 0;
     height: 100vh;
     width: min(75vw, 300px);
-    background-color: var(--color-blue-dark);
+    background-color: var(--color-burgundy-dark);
     transform: translateX(100%);
     transition: transform 0.25s ease;
     padding: 5rem 1.5rem 2rem;
@@ -360,7 +360,7 @@ section {
 
 .card-price {
   font-weight: 700;
-  color: var(--color-blue);
+  color: var(--color-burgundy);
   font-size: 1.1rem;
   margin-top: 1rem;
 }
@@ -378,7 +378,7 @@ section {
   padding: 0.2rem 0.55rem;
   border-radius: 999px;
   background-color: var(--color-cream-dark);
-  color: var(--color-blue);
+  color: var(--color-burgundy);
   border: 1px solid var(--color-gold);
 }
 
@@ -400,12 +400,12 @@ section {
 .hours-table th {
   width: 50%;
   font-weight: 600;
-  color: var(--color-blue);
+  color: var(--color-burgundy);
 }
 
 /* ---------- CTA band ---------- */
 .cta-band {
-  background-color: var(--color-blue-dark);
+  background-color: var(--color-burgundy);
   color: var(--color-cream);
   text-align: center;
   padding: 3.5rem 1.25rem;
@@ -500,7 +500,7 @@ section {
 }
 
 .form-field .required {
-  color: var(--color-blue);
+  color: var(--color-burgundy);
 }
 
 .form-field input,
@@ -597,7 +597,7 @@ section {
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background-color: var(--color-blue-dark);
+  background-color: var(--color-burgundy-dark);
   color: var(--color-cream-dark);
   padding: 3rem 0 1.5rem;
 }
@@ -649,7 +649,7 @@ section {
 .social-links a:hover,
 .social-links a:focus-visible {
   background-color: var(--color-gold);
-  color: var(--color-blue-dark);
+  color: var(--color-burgundy-dark);
 }
 
 .footer-bottom {
